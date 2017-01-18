@@ -36,4 +36,4 @@ cd $HOME/cf-release
 ./scripts/generate-bosh-lite-dev-manifest
 sudo chown -R vagrant:vagrant bosh-lite
 
-# bosh upload release releases/cf-250.yml
+echo "yes" | bosh deploy # Automatically answer 'yes' to deployment
