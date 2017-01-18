@@ -11,11 +11,11 @@ sudo gem install bundler
 cd $HOME # Make sure we are in /home/vagrant
 if [ ! -d $HOME/cf-release ]; then
   git clone https://github.com/cloudfoundry/cf-release.git
+  cd $HOME/cf-release
+  git checkout v250
 else
   echo "cf-release already checked out, skipping"
 fi
-cd $HOME/cf-release
-git checkout v250
 
 if [ ! -f $HOME/bosh-stemcell-3312.15-warden-boshlite-ubuntu-trusty-go_agent.tgz ]; then
 	echo " ** Download and install stemcell"
