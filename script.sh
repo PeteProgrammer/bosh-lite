@@ -33,7 +33,7 @@ bosh upload release https://bosh.io/d/github.com/cloudfoundry/cf-release?v=250 -
 bash $VAGRANT_DIR/install_spiff.sh
 
 cd $HOME/cf-release
-./script/generate-bosh-lite-dev-manifest
+./scripts/generate-bosh-lite-dev-manifest
 sudo chown -R vagrant:vagrant bosh-lite
 
 # bosh upload release releases/cf-250.yml
