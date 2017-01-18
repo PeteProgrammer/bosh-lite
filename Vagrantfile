@@ -5,6 +5,8 @@ Vagrant.configure('2') do |config|
     override.vm.box_version = '9000.137.0' # ci:replace
     # To use a different IP address for the bosh-lite director, uncomment this line:
     # override.vm.network :private_network, ip: '192.168.59.4', id: :local
+    
+    v.memory = 4096
   end
 
   config.vm.provider :aws do |v, override|
