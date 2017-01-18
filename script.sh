@@ -1,5 +1,9 @@
 set -r # Automatically fail script when some command fail
-bash ./install_deps.sh 
+VAGRANT_DIR=`pwd`
+echo "Source directory $VAGRANT"
+bash $VAGRANT_DIR/install_deps.sh 
+
+export PATH=$PATH:$HOME/bin
 
 cd $HOME # Make sure we are in /home/vagrant
 if [ ! -d $HOME/cf-release ]; then
@@ -10,3 +14,4 @@ else
 fi
 
 
+bash $VAGRANT_DIR/install_spiff
