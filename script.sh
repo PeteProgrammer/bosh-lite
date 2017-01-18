@@ -13,5 +13,7 @@ else
   echo "cf-release already checked out, skipping"
 fi
 
+bosh download public stemcell bosh-stemcell-389-warden-boshlite-ubuntu-trusty-go_agent.tgz
+bosh upload stemcell bosh-stemcell-389-warden-boshlite-ubuntu-trusty-go_agent.tgz
 
 bash $VAGRANT_DIR/install_spiff
