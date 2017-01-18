@@ -33,4 +33,7 @@ Vagrant.configure('2') do |config|
     #we no longer build current boxes for vmware_workstation
     #ensure that this fails. otherwise the user gets an old box
   end
+
+  config.vm.provision "shell", path: "script.sh", privileged: false
+
 end
