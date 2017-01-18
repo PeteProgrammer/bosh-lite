@@ -1,4 +1,4 @@
-set -r # Automatically fail script when some command fail
+set -e # Automatically fail script when some command fail
 VAGRANT_DIR=/vagrant
 echo "Source directory $VAGRANT"
 bash $VAGRANT_DIR/install_deps.sh 
