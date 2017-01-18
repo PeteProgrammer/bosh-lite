@@ -6,7 +6,7 @@ bash $VAGRANT_DIR/install_deps.sh
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.gem/ruby/2.0.0/bin
 
-gem install --user-install bundler
+sudo gem install bundler
 
 cd $HOME # Make sure we are in /home/vagrant
 if [ ! -d $HOME/cf-release ]; then
@@ -33,7 +33,7 @@ bosh upload release https://bosh.io/d/github.com/cloudfoundry/cf-release?v=250 -
 bash $VAGRANT_DIR/install_spiff.sh
 
 cd $HOME/cf-release
-./scripts/generate-bosh-lite-dev-manifest
+sudo ./scripts/generate-bosh-lite-dev-manifest
 sudo chown -R vagrant:vagrant bosh-lite
 
 echo "yes" | bosh deploy # Automatically answer 'yes' to deployment
