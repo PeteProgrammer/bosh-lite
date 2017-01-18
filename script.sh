@@ -16,4 +16,6 @@ fi
 bosh download public stemcell bosh-stemcell-389-warden-boshlite-ubuntu-trusty-go_agent.tgz
 bosh upload stemcell bosh-stemcell-389-warden-boshlite-ubuntu-trusty-go_agent.tgz
 
+bosh upload release https://bosh.io/d/github.com/cloudfoundry/cf-release?v=250
+
 bash $VAGRANT_DIR/install_spiff
