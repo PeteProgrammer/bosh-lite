@@ -38,3 +38,5 @@ sudo ./scripts/generate-bosh-lite-dev-manifest
 sudo chown -R vagrant:vagrant bosh-lite
 
 echo "yes" | bosh deploy # Automatically answer 'yes' to deployment
+
+$VAGRANT_DIR/install_mysql.sh
